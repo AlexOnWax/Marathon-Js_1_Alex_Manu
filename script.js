@@ -8,7 +8,8 @@ const paragraphe = document.getElementById("text-explication");
 const nameValue = firstName.value.trim();
 const inputs = document.querySelectorAll(".input");
 const lastNameValue = lastName.value.trim();
-
+const error1 =document.querySelector(".error1")
+const errors = document.querySelectorAll(".invisible");
 const eMailValue = eMail.value.trim();
 
 const passwordValue = password.value.trim();
@@ -18,22 +19,41 @@ const passwordValue = password.value.trim();
 
 
 
-for (input of inputs) {
-  i=0
-  i++
- formulaire.addEventListener("submit", function (e) {
-    e.preventDefault();
+// for (input of inputs) {
+//   i=-1
+//  formulaire.addEventListener("submit", function (e) {
+//     e.preventDefault();
+//  i++
+//     if (inputs[i].value === "") {
+//       span = document.createElement("SPAN");
+//       span = document.createTextNode(`${inputs[i].id} cannot be empty`);
+//       errors[i].appendChild(span)
+//     }
+//   });
 
-    if (inputs[i].value === "") {
-      span = document.createElement("SPAN");
-      span = document.createTextNode(`${inputs[i].id} cannot be empty`);
-      formulaire.replaceChildren(span);
-    }
+// }
+
+// const nameInput = document.querySelector('input');
+formulaire.addEventListener("submit", function (e) {
+  
+  e.preventDefault();
+  
+  firstName.addEventListener('input', () => {
+    firstName.setCustomValidity('');
+    firstName.checkValidity();
   });
+  
 
-}
 
+firstName.addEventListener('invalid', () => {
+  if(firstName.value === '') {
+    firstName.setCustomValidity('Enter your username!');
+  } else {
+    firstName.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+  }
+});
 
+})
 
 
 
@@ -77,4 +97,4 @@ for (input of inputs) {
 //       formulaire.replaceChild(error,password.nextSibling);
 //     }
 
-//   });
+//;
