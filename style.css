@@ -138,4 +138,7 @@ footer {
         grid-row: 2;
         margin-right: 0;
     }
+    #formulaire {
+        margin-bottom: 20%;
+    }
 }
