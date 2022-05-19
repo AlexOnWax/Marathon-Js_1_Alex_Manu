@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    background-image: url(/images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%) ;
+ 
+}
+#main-content {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
