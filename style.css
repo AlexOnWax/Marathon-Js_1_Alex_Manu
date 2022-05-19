@@ -8,15 +8,19 @@ body {
     
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    margin-left: 150px;
+    margin-right: 150px;
 }
 form {
     width: 500px;
     display: flex;
     flex-direction: column;
-
-
+    background-color: white;
+    padding: 32px;
+    border-radius: 10px;
+}
+label{
+    visibility: hidden;
 }
 .main-grid {
     display: grid;
