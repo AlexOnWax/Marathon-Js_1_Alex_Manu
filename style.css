@@ -2,6 +2,8 @@ body {
     margin: 0;
     background-image: url(/images/bg-intro-desktop.png);
     background-color: hsl(0, 100%, 74%) ;
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Poppins', sans-serif;
  
 }
 #main-content {
@@ -10,7 +12,32 @@ body {
     justify-content: center;
     margin-left: 150px;
     margin-right: 150px;
+    height: 100vh;
 }
+
+.try-it{
+    background-color: rgb(149, 89, 206);
+    margin-bottom: 24px;
+    text-align: center;
+    color: white;
+    padding: 14px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 8px rgba(0, 0, 0, 0.171);
+    font-weight: bold;
+}
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10%;
+    justify-items: center;
+    align-items: center;
+}
+#price{
+    font-weight: normal;
+    opacity: 60%;
+}
+
 form {
     width: 500px;
     display: flex;
@@ -18,14 +45,24 @@ form {
     background-color: white;
     padding: 32px;
     border-radius: 10px;
+    box-shadow: 0px 8px rgba(0, 0, 0, 0.171);
 }
 label{
     visibility: hidden;
 }
-.main-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    align-items: center;
+input{
+    padding: 20px 20px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.185);
+}
+input::placeholder{
+    opacity: 90%;
+}
+button{
+    margin: 20px 0px;
+    background-color: rgba(15, 190, 44, 0.61);
+    color: white;
+    padding: 20px;
+    border: none;
+    box-shadow: 0px 4px rgba(1, 146, 25, 0.658);
 }
