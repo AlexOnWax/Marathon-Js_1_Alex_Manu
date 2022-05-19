@@ -33,6 +33,11 @@ const passwordValue = password.value;
 
 // }
 
+// btn.addEventListener('click', () => {
+//   error1.classList.add('help')
+// })
+
+
 formulaire.addEventListener("submit", function (e) {
   
   e.preventDefault();
@@ -41,49 +46,56 @@ formulaire.addEventListener("submit", function (e) {
     firstName.setCustomValidity('');
     firstName.checkValidity();
   });
-firstName.addEventListener('invalid', () => {
-  if(firstName.value === '') {
-    firstName.setCustomValidity('Enter your username!');
-  } else {
-    firstName.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
-  }
+  firstName.addEventListener('invalid', () => {
+     if(firstName.value === '') {
+       firstName.setCustomValidity('Enter your username!');
+       error1.classList.add('help')
+     } else {
+       firstName.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+     }
+     
+
+  
+    
+
+  
 });
 
-lastName.addEventListener('input', () => {
-  lastName.setCustomValidity('');
-  lastName.checkValidity();
-});
-lastName.addEventListener('invalid', () => {
-if(lastName.value === '') {
-  lastName.setCustomValidity('Enter your username!');
-} else {
-  lastName.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
-}
-});
+// lastName.addEventListener('input', () => {
+//   lastName.setCustomValidity('Enter your username!');
+//   lastName.checkValidity();
+// });
+// lastName.addEventListener('invalid', () => {
+// if(lastName.value === '') {
+//   lastName.setCustomValidity('Enter your username!');
+// } else {
+//   lastName.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+// }
+// });
 
-eMail.addEventListener('input', () => {
-  eMail.setCustomValidity('');
-  eMail.checkValidity();
-});
-eMail.addEventListener('invalid', () => {
-if(eMail.value === '') {
-  eMail.setCustomValidity('Enter your username!');
-} else {
-  eMail.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
-}
-});
+// eMail.addEventListener('input', () => {
+//   eMail.setCustomValidity('');
+//   eMail.checkValidity();
+// });
+// eMail.addEventListener('invalid', () => {
+// if(eMail.value === '') {
+//   eMail.setCustomValidity('Enter your username!');
+// } else {
+//   eMail.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+// }
+// });
 
-password.addEventListener('input', () => {
-  password.setCustomValidity('');
-  password.checkValidity();
-});
-password.addEventListener('invalid', () => {
-if(password.value === '') {
-  password.setCustomValidity('Enter your username!');
-} else {
-  password.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
-}
-});
+// password.addEventListener('input', () => {
+//   password.setCustomValidity('');
+//   password.checkValidity();
+// });
+// password.addEventListener('invalid', () => {
+// if(password.value === '') {
+//   password.setCustomValidity('Enter your username!');
+// } else {
+//   password.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+// }
+// });
 
 
 })
