@@ -1,4 +1,4 @@
-const form = document.getElementById('formulaire')
+const formulaire = document.getElementById('formulaire')
 const firstName = document.getElementById('name')
 const lastName = document.getElementById('last-name')
 const eMail = document.getElementById('email')
@@ -14,13 +14,32 @@ const eMailValue = eMail.value.trim()
 const passwordValue = password.value.trim()
 
 
-form.addEventListener('submit', function(e){
+formulaire.addEventListener('submit', function(e) {
+e.preventDefault();
 
-    e.preventDefault();
-    console.log("form ok");
-if(nameValue==="") {
-console.log('erreur');
+  
+
+
+
+
+if(nameValue.length < 2 || nameValue.length > 10) {
+  console.log("erreur");
 }else{
-    console.log('succes');
+  console.log('succes');
 }
-});
+
+
+
+
+
+  });
+
+
+if (nameValue === ""){
+    console.log('erreur');
+}else if (lastNameValue === ""){
+    console.log('erreur');
+}else if (eMailValue === ""){
+  console.log('erreur');}
+  else if (passwordValue === ""){
+    console.log('erreur');}
