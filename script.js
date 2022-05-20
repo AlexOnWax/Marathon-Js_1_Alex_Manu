@@ -53,7 +53,7 @@ formulaire.addEventListener("submit", function (e) {
      } else {
        firstName.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
      }
-     
+     firstName.reportValidity();
 
   
     
