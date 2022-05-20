@@ -28,6 +28,7 @@ function inputValidation() {
     const message = document.createTextNode(`${input.id} cannot be empty`)
     errors[i].replaceChildren(message)
       errors[i].classList.add('help')
+      input.classList.add('error')
      
      } else if (input.validity.patternMismatch) {
     const message = document.createTextNode(`${input.id} syntax`)
