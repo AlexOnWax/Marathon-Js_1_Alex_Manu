@@ -29,13 +29,13 @@ function inputValidation() {
     errors[i].replaceChildren(message)
       errors[i].classList.add('help')
       input.classList.add('error')
-     
+      input.style.background="url('images/icon-error.svg') no-repeat right 10px center "
+
      } else if (input.validity.patternMismatch) {
     const message = document.createTextNode(`${input.id} syntax`)
     errors[i].replaceChildren(message)
     errors[i].classList.add('help')
     input.classList.add('error')
-    input.style.background="url('images/icon-error.svg') "
 
      }else if (input.validity.typeMismatch) {
     const message = document.createTextNode(`${input.id} Looks like this is not an email`)
