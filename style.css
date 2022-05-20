@@ -66,6 +66,9 @@ body {
 
 
 /* ------------------------(Contenue de droite)------------------ */
+#right-content{
+    width: 80%;
+}
 .try-it{
     background-color: rgb(149, 89, 206);
     margin-bottom: 24px;
