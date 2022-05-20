@@ -34,16 +34,20 @@ function inputValidation() {
     const message = document.createTextNode(`${input.id} syntax`)
     errors[i].replaceChildren(message)
     errors[i].classList.add('help')
+    input.classList.add('error')
 
      }else if (input.validity.typeMismatch) {
     const message = document.createTextNode(`${input.id} Looks like this is not an email`)
     errors[i].replaceChildren(message)
     errors[i].classList.add('help')
+    input.classList.add('error')
 
      } else {
       const message = document.createTextNode('')
       errors[i].replaceChildren(message)
       errors[i].classList.add('help')
+      input.classList.remove('error')
+
      }
 
      

@@ -15,8 +15,13 @@ body {
 }
 .help.invisible {
     visibility: visible;
+    font-size: 15px;
+    text-align: right;
 }
-
+.error.input {
+    border: solid 3px red;
+    
+}
 
 /*---------------------------------------------*/
 
