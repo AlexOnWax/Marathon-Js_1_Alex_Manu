@@ -124,6 +124,8 @@ footer {
     display: none;
 }
 
+
+
 @media screen and (max-width: 620px) {
 /* -----------(Contenue de base)-------- */
     #main-content {
