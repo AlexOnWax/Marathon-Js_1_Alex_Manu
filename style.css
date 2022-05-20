@@ -16,6 +16,9 @@ body {
 .help.invisible {
     visibility: visible;
 }
+.error.input {
+    border: 1px solid hsl(0, 100%, 74%);
+}
 /*---------------------------------------------*/
 
 /* ----------------(Div content de base)--------------- */
@@ -121,6 +124,8 @@ button:hover{
 footer {
     display: none;
 }
+
+
 
 @media screen and (max-width: 620px) {
 /* -----------(Contenue de base)-------- */
