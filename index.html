@@ -32,16 +32,16 @@
 
 <form id="formulaire" name="formulaire" action="submit" novalidate >
 
-  <input type="text" class="input" id="name" required pattern="[A-Za-z]+"  placeholder="name">
-  <div class="error1 invisible"></div>
+  <input type="text" class="input" id="name" required pattern="[A-Za-z]+" minlength="3"  placeholder="name">
+  <div class="invisible"></div>
   <input type="text" class="input" id="last-name" required pattern="[A-Za-z]+" placeholder="Last Name">
-  <div class="error2 invisible"></div>
+  <div class="invisible"></div>
 
   <input type="email" class="input" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email Address">
-  <div class="error3 invisible"></div>
+  <div class="invisible"></div>
 
-  <input type="password" class="input" id="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  placeholder="Password">
-  <div class="error4 invisible"></div>
+  <input type="text" class="input" id="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  placeholder="Password">
+  <div class="invisible"></div>
 
   <button id="btn" type="submit"> Claim your free trial </button>
   <p id="p_form"> By clicking the button, you are agreeing to our <span id="therms_of_use"> Terms and Services</span>
