@@ -10,14 +10,21 @@ body {
 
 .invisible {
     color:hsl(0, 100%, 74%);
-    visibility: visible;
+   
     margin-bottom: 20px;
+
+    visibility: hidden;
+
+
 }
 .help.invisible {
     visibility: visible;
-    font-size: 15px;
+    
     text-align: right;
     font-size: 12px;
+
+    
+
 }
 .error.input {
     border: solid 3px red;
