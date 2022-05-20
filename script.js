@@ -19,127 +19,44 @@ const passwordValue = password.value;
 
 
 
-// for (input of inputs) {
-//   i=-1
-//  formulaire.addEventListener("submit", function (e) {
-//     e.preventDefault();
-//  i++
-//     if (inputs[i].value === "") {
-//       span = document.createElement("SPAN");
-//       span = document.createTextNode(`${inputs[i].id} cannot be empty`);
-//       error1.appendChild(span);
-//     }
-//   });
+// paragraphe.addEventListener('click', () => {
+//   const error1 =document.querySelector(".error1")
 
-// }
-
-// btn.addEventListener('click', () => {
-//   error1.classList.add('help')
+//   const erortest = document.createTextNode('Please enter your name.')
+//        error1.replaceChildren(erortest)
+//         error1.classList.add('help')
 // })
 
 
+
+
 formulaire.addEventListener("submit", function (e) {
+
+  for (let i=; i<= inputs.length; i++) {
+
   
+  const error1 =document.querySelector(".error1")
+
   e.preventDefault();
   
   firstName.addEventListener('input', () => {
     firstName.setCustomValidity('');
     firstName.checkValidity();
   });
-  firstName.addEventListener('invalid', () => {
-     if(firstName.value === '') {
-       firstName.setCustomValidity('Enter your username!');
-       error1.classList.add('help')
-     } else {
-       firstName.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
-     }
-     firstName.reportValidity();
 
-  
+ 
+     if(firstName.value === '') {
+      const error1 =document.querySelector(".error1")
+    const erortest = document.createTextNode(`${inputs[i]} cannot be empty`)
+      error1.replaceChildren(erortest)
+        error1.classList.add('help')
+       
+     } else {
+     
+     }
+
+    
+    })
     
 
-  
-});
 
-// lastName.addEventListener('input', () => {
-//   lastName.setCustomValidity('Enter your username!');
-//   lastName.checkValidity();
-// });
-// lastName.addEventListener('invalid', () => {
-// if(lastName.value === '') {
-//   lastName.setCustomValidity('Enter your username!');
-// } else {
-//   lastName.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
-// }
-// });
-
-// eMail.addEventListener('input', () => {
-//   eMail.setCustomValidity('');
-//   eMail.checkValidity();
-// });
-// eMail.addEventListener('invalid', () => {
-// if(eMail.value === '') {
-//   eMail.setCustomValidity('Enter your username!');
-// } else {
-//   eMail.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
-// }
-// });
-
-// password.addEventListener('input', () => {
-//   password.setCustomValidity('');
-//   password.checkValidity();
-// });
-// password.addEventListener('invalid', () => {
-// if(password.value === '') {
-//   password.setCustomValidity('Enter your username!');
-// } else {
-//   password.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
-// }
-// });
-
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// formulaire.addEventListener('submit', function(e) {
-//   e.preventDefault();
-
-//   if (nameValue === ""){
-//     let error = document.createElement("SPAN");
-//     error = document.createTextNode("First name Cannot be empty");
-//     formulaire.replaceChild(error,firstName.nextSibling);
-
-//   }else if (lastNameValue === ""){
-//     let error = document.createElement("SPAN");
-//     error = document.createTextNode("Last Name cannot be empty");
-//     formulaire.replaceChild(error,lastName.nextSibling);
-
-//   }else if (eMailValue === ""){
-//     let error = document.createElement("SPAN");
-//     error = document.createTextNode("cannot be empty");
-//     formulaire.replaceChild(error,eMail.nextSibling);
-
-//   }
-//     else if (passwordValue === ""){
-//       let error = document.createElement("SPAN");
-//       error = document.createTextNode("Password cannot be empty");
-//       formulaire.replaceChild(error,password.nextSibling);
-//     }
-
-//;

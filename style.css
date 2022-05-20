@@ -10,7 +10,7 @@ body {
 
 .invisible {
     color:hsl(0, 100%, 74%);
-    visibility: hidden;
+    visibility: visible;
 
 }
 .help.invisible {
