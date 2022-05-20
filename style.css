@@ -123,6 +123,7 @@ footer {
 }
 
 @media screen and (max-width: 620px) {
+/* -----------(Contenue de base)-------- */
     #main-content {
         width: 100%;
         margin: 0;
@@ -132,7 +133,9 @@ footer {
         width: 100%;
         margin: 0 5%;
     }
+/* -------------------------------------- */
 
+/* ------------(Contenue de gauche)-------------- */
     #left-content {
         grid-column: 1;
         grid-row: 1;
@@ -145,6 +148,9 @@ footer {
     #left-content > p {
         font-size: 100%;
     }
+/* ----------------------------------------------- */
+
+/* --------------------(contenue de droite)------------------ */
     #right-content {
         grid-column: 1;
         grid-row: 2;
@@ -153,4 +159,5 @@ footer {
     #formulaire {
         margin-bottom: 20%;
     }
+/* --------------------------------------------------------- */
 }
