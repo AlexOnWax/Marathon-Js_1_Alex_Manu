@@ -11,52 +11,54 @@ const lastNameValue = lastName.value;
 const error1 =document.querySelector(".error1")
 const errors = document.querySelectorAll(".invisible");
 const eMailValue = eMail.value;
-
 const passwordValue = password.value;
 
 
-
-
-
-
-// paragraphe.addEventListener('click', () => {
-//   const error1 =document.querySelector(".error1")
-
-//   const erortest = document.createTextNode('Please enter your name.')
-//        error1.replaceChildren(erortest)
-//         error1.classList.add('help')
-// })
-
-
-
-
-formulaire.addEventListener("submit", function (e) {
-
-  for (let i=; i<= inputs.length; i++) {
-
+function inputValidation() {
   
-  const error1 =document.querySelector(".error1")
-
-  e.preventDefault();
-  
-  firstName.addEventListener('input', () => {
-    firstName.setCustomValidity('');
-    firstName.checkValidity();
+  var i=-1
+  inputs.forEach((input) => {
+    i++
+    input.addEventListener('input', () => {
+    input.setCustomValidity('');
+    input.checkValidity();
   });
 
- 
-     if(firstName.value === '') {
-      const error1 =document.querySelector(".error1")
-    const erortest = document.createTextNode(`${inputs[i]} cannot be empty`)
-      error1.replaceChildren(erortest)
-        error1.classList.add('help')
-       
-     } else {
+     if(input.validity.valueMissing) {
+    const message = document.createTextNode(`${input.id} cannot be empty`)
+    errors[i].replaceChildren(message)
+      errors[i].classList.add('help')
      
+     } else if (input.validity.patternMismatch) {
+    const message = document.createTextNode(`${input.id} syntax`)
+    errors[i].replaceChildren(message)
+    errors[i].classList.add('help')
+
+     }else if (input.validity.typeMismatch) {
+    const message = document.createTextNode(`${input.id} Looks like this is not an email`)
+    errors[i].replaceChildren(message)
+    errors[i].classList.add('help')
+
+     } else {
+      const message = document.createTextNode('')
+      errors[i].replaceChildren(message)
+      errors[i].classList.add('help')
      }
 
+     
     
-    })
+    }
+    )
+
+}
+
+
+formulaire.addEventListener("submit", function (event) {
+  event.preventDefault();
+  inputValidation();
+ 
+  
+  })
     
 
 
